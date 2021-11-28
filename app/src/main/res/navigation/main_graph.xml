@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="dev.maxsiomin.qr.fragments.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_tabsFragment"
+            app:destination="@id/tabsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="dev.maxsiomin.qr.fragments.resetpassword.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" />
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="dev.maxsiomin.qr.fragments.signup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_tabsFragment"
+            app:destination="@id/tabsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tabsFragment"
+        android:name="dev.maxsiomin.qr.fragments.tabs.TabsFragment"
+        android:label="fragment_tabs"
+        tools:layout="@layout/fragment_tabs" >
+        <action
+            android:id="@+id/action_tabsFragment_to_qrFragment"
+            app:destination="@id/qrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="dev.maxsiomin.qr.fragments.qr.QrFragment"
+        android:label="fragment_qr"
+        tools:layout="@layout/fragment_qr" >
+
+        <argument
+            android:name="QrCodeText"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

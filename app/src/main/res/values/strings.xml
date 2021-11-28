@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">QR generator</string>
+
+    <string name="msd_account">MSD account</string>
+
+    <!-- Login fragment, signup fragment, reset password fragment -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="weak_password">Use %1$d characters or more for your password</string>
+    <string name="unable_to_signup">Unable to create user</string>
+    <string name="unable_to_login">Unable to log in</string>
+    <string name="passwords_not_match">Those passwords didn’t match. Try again</string>
+    <string name="password_not_provided">Please, provide a password</string>
+    <string name="want_verify_email">Would you like to verify your email?</string>
+    <string name="verify">Verify</string>
+    <string name="reset_password">Reset password</string>
+    <string name="check_email">Check your email</string>
+    <string name="unable_to_send_reset_email">Unable to reset password. Try again later</string>
+    <string name="unable_to_send_email_verification">Unable to send email verification. Try again later</string>
+
+    <!-- MainActivity -->
+    <string name="last_version_checking_failed">Unable to check for updates</string>
+    <string name="update_app">Would you like to install latest app version?\nCurrent version: %1$s\nLatest version: &#160;&#160;%2$s</string>
+    <string name="no_thanks">No, thanks</string>
+    <string name="update">Update</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+
+    <!-- Theme -->
+    <string name="automatically">Automatically</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+
+    <!-- Generate Fragment -->
+    <string name="generate">Generate</string>
+    <string name="qr_code_text">QR code text</string>
+    <string name="invalid_value">Invalid text value</string>
+
+    <!-- History Fragment -->
+    <string name="history">History</string>
+    <string name="empty_history">You don\'t have any history yet</string>
+
+    <!-- Settings -->
+    <string name="theme">Theme</string>
+    <string name="history_off">History won\'t be saved</string>
+    <string name="history_on">History will be saved</string>
+    <string name="save_history">Save history</string>
+    <string name="clear_history">Clear history</string>
+    <string name="warn_clear_history">You will not be able to cancel this action</string>
+    <string name="more">More</string>
+    <string name="help_and_feedback">Help &amp; feedback</string>
+    <string name="share_this_app">Share this app</string>
+    <string name="more_apps">More apps</string>
+    <string name="history_cleared">Search history cleared</string>
+    <string name="mail_client_not_found">You don\'t have any mail clients installed on your device</string>
+    <string name="smth_went_wrong">Something went wrong</string>
+    <string name="send_email_verification">Send email verification</string>
+    <string name="log_out">Log out</string>
+
+    <!-- Preference keys -->
+    <string name="key_theme" translatable="false">theme</string>
+    <string name="key_history" translatable="false">history</string>
+    <string name="key_help_and_feedback" translatable="false">help_and_feedback</string>
+    <string name="key_share_this_app" translatable="false">share_this_app</string>
+    <string name="key_more_apps" translatable="false">more_apps</string>
+    <string name="key_clear_history" translatable="false">clear_history</string>
+    <string name="key_app_version" translatable="false">app_version</string>
+    <string name="key_verify_email" translatable="false">verify_email</string>
+    <string name="key_log_out" translatable="false">log_out</string>
+
+</resources>

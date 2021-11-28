@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/drawable/ic_history.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/drawable/ic_max_brightness.xml" value="0.37864583333333335" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_generate.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_history.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_history_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_login.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_qr.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_reset_password.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_scan.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_signup.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/layout/fragment_tabs.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/menu/tabs_menu.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QR-Scanner/app/src/main/res/xml/settings.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/QRscanner/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout-land/fragment_login.xml" value="0.4276041666666667" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout-land/fragment_signup.xml" value="0.4276041666666667" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout/fragment_generate.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout/fragment_signup.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/Qq-generator/app/src/main/res/layout/fragment_tabs.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

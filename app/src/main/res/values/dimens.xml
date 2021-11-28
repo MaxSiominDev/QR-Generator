@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_signup_resetpassword_fragments_side_margin">16dp</dimen>
+    <dimen name="qr_size">300dp</dimen>
+    <dimen name="history_item_text_margin">16dp</dimen>
+</resources>

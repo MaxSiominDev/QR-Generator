@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView tools:text="https://maxsiomin.dev"
+    android:id="@+id/qr_code_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/history_item_text_margin"
+    android:textAppearance="?attr/textAppearanceListItem"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

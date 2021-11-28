@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@id/generate_graph"
+        android:title="@string/generate"
+        android:icon="@drawable/ic_qr" />
+
+    <item android:id="@id/history_graph"
+        android:title="@string/history"
+        android:icon="@drawable/ic_history" />
+
+    <item android:id="@id/settings_graph"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings" />
+
+</menu>

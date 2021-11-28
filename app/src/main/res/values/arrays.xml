@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- For settings -->
+    <string-array name="themes">
+        <item>@string/automatically</item>
+        <item>@string/light</item>
+        <item>@string/dark</item>
+    </string-array>
+
+    <!-- For settings -->
+    <string-array name="themes_values">
+        <item>-1</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

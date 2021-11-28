@@ -1,0 +1,32 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/history_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- RecyclerView for history -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/history_recycler_view"
+        android:name="dev.maxsiomin.domainsearch.ui.HistoryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="GridLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".fragments.history.HistoryFragment"
+        tools:listitem="@layout/fragment_history_item" />
+
+    <!-- This textView is showed if history is empty. In this case it's exactly in center of screen -->
+    <TextView
+        android:id="@+id/history_is_empty_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_history"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

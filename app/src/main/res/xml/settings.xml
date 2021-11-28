@@ -1,0 +1,67 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <PreferenceCategory app:title="@string/history" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/key_history"
+            android:defaultValue="true"
+            app:summaryOff="@string/history_off"
+            app:summaryOn="@string/history_on"
+            app:title="@string/save_history" />
+
+        <Preference
+            android:title="@string/clear_history"
+            android:key="@string/key_clear_history"
+            android:summary="@string/warn_clear_history"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/theme">
+
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_values"
+            app:key="@string/key_theme"
+            android:summary="%s"
+            android:title="@string/theme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/msd_account">
+
+        <Preference
+            android:title="@string/send_email_verification"
+            app:isPreferenceVisible="false"
+            android:key="@string/key_verify_email" />
+
+        <Preference
+            android:title="@string/log_out"
+            android:key="@string/key_log_out" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/more" >
+
+        <Preference
+            android:title="@string/help_and_feedback"
+            android:key="@string/key_help_and_feedback" />
+
+        <Preference
+            android:title="@string/share_this_app"
+            android:key="@string/key_share_this_app" />
+
+        <Preference
+            android:title="@string/more_apps"
+            android:key="@string/key_more_apps" />
+
+        <Preference
+            android:key="@string/key_app_version"
+            android:selectable="false"
+            tools:summary="current version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
