@@ -14,11 +14,7 @@ import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.activity.DialogBuilder
 import dev.maxsiomin.qr.databinding.FragmentSignupBinding
 import dev.maxsiomin.qr.extensions.clearError
-import dev.maxsiomin.qr.extensions.sharedData
-import dev.maxsiomin.qr.extensions.toEditable
 import dev.maxsiomin.qr.fragments.base.BaseFragment
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.EMAIL
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.PASSWORD
 import dev.maxsiomin.qr.util.Email
 import dev.maxsiomin.qr.util.Password
 import dev.maxsiomin.qr.util.Password.Companion.PASSWORD_MIN_LENGTH
@@ -42,14 +38,6 @@ class SignupFragment : BaseFragment(R.layout.fragment_signup) {
         binding = FragmentSignupBinding.bind(view)
 
         with (binding) {
-            sharedData.getSharedString(EMAIL)?.let {
-                emailEditText.text = it.toEditable()
-            }
-
-            sharedData.getSharedString(PASSWORD)?.let {
-                passwordEditText.text = it.toEditable()
-            }
-
             loginTextView.setOnClickListener { findNavController().popBackStack() }
 
             signupButton.setOnClickListener {
@@ -94,12 +82,6 @@ class SignupFragment : BaseFragment(R.layout.fragment_signup) {
                 confirmPasswordEditTextLayout.clearError()
             }
         }
-    }
-
-    override fun onStop() {
-        sharedData.putSharedString(EMAIL, binding.emailEditText.text?.toString())
-        sharedData.putSharedString(PASSWORD, binding.passwordEditText.text?.toString())
-        super.onStop()
     }
 
     /**

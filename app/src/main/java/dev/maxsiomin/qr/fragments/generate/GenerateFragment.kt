@@ -9,12 +9,9 @@ import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.database.HistoryElement
 import dev.maxsiomin.qr.databinding.FragmentGenerateBinding
 import dev.maxsiomin.qr.extensions.clearError
-import dev.maxsiomin.qr.extensions.sharedData
-import dev.maxsiomin.qr.extensions.toEditable
 import dev.maxsiomin.qr.fragments.base.BaseFragment
 import dev.maxsiomin.qr.fragments.base.BaseViewModel
 import dev.maxsiomin.qr.fragments.tabs.TabsFragment
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.QR_CODE_TEXT
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -55,22 +52,9 @@ class GenerateFragment : BaseFragment(R.layout.fragment_generate) {
 
             (parentFragment!!.parentFragment as TabsFragment).showQrCode(text)
         }
-
-        // Restore saved state
-        sharedData.getSharedString(QR_CODE_TEXT)?.toEditable()?.let {
-            binding.qrCodeText.text = it
-        }
     }
-
 
     private suspend fun pushHistory(elem: HistoryElement) {
         mViewModel.historyDao.insertQuery(elem)
-    }
-
-    override fun onStop() {
-        super.onStop()
-
-        // Save state
-        sharedData.putSharedString(QR_CODE_TEXT, binding.qrCodeText.text.toString())
     }
 }

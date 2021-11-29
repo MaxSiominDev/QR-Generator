@@ -14,17 +14,12 @@ import dev.maxsiomin.qr.APK_LOCATION
 import dev.maxsiomin.qr.BuildConfig
 import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.extensions.openInBrowser
-import dev.maxsiomin.qr.shareddata.SHARED_DATA
-import dev.maxsiomin.qr.shareddata.SharedData
-import dev.maxsiomin.qr.shareddata.SharedDataImpl
 import dev.maxsiomin.qr.util.SharedPrefsConfig.DATE_UPDATE_SUGGESTED
 import java.time.LocalDate
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), Updater {
-
-    lateinit var sharedData: SharedData
 
     @Inject
     lateinit var analytics: FirebaseAnalytics
@@ -34,8 +29,6 @@ class MainActivity : AppCompatActivity(), Updater {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        sharedData = SharedDataImpl(savedInstanceState?.getBundle(SHARED_DATA))
 
         mViewModel.checkForUpdates { latestVersionName ->
             suggestUpdating(latestVersionName)

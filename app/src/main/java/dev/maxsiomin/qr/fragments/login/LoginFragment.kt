@@ -10,11 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.databinding.FragmentLoginBinding
 import dev.maxsiomin.qr.extensions.clearError
-import dev.maxsiomin.qr.extensions.sharedData
-import dev.maxsiomin.qr.extensions.toEditable
 import dev.maxsiomin.qr.fragments.base.BaseFragment
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.EMAIL
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.PASSWORD
 import dev.maxsiomin.qr.util.Email
 import dev.maxsiomin.qr.util.Password
 import javax.inject.Inject
@@ -40,16 +36,6 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
         binding = FragmentLoginBinding.bind(view)
 
         with (binding) {
-            // Restore state
-            sharedData.getSharedString(EMAIL)?.let {
-                emailEditText.text = it.toEditable()
-            }
-
-            // Restore state
-            sharedData.getSharedString(PASSWORD)?.let {
-                passwordEditText.text = it.toEditable()
-            }
-
             loginButton.setOnClickListener {
                 val email = Email(emailEditText.text)
                 val password = Password(passwordEditText.text)
@@ -84,12 +70,6 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
                 findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
             }
         }
-    }
-
-    override fun onStop() {
-        sharedData.putSharedString(EMAIL, binding.emailEditText.text?.toString())
-        sharedData.putSharedString(PASSWORD, binding.passwordEditText.text?.toString())
-        super.onStop()
     }
 
     private fun onLogin() {

@@ -9,10 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.databinding.FragmentResetPasswordBinding
 import dev.maxsiomin.qr.extensions.clearError
-import dev.maxsiomin.qr.extensions.sharedData
-import dev.maxsiomin.qr.extensions.toEditable
 import dev.maxsiomin.qr.fragments.base.BaseFragment
-import dev.maxsiomin.qr.shareddata.SharedDataKeys.EMAIL
 import dev.maxsiomin.qr.util.Email
 
 @AndroidEntryPoint
@@ -30,10 +27,6 @@ class ResetPasswordFragment : BaseFragment(R.layout.fragment_reset_password) {
         binding = FragmentResetPasswordBinding.bind(view)
 
         with (binding) {
-            sharedData.getSharedString(EMAIL)?.let {
-                emailEditText.text = it.toEditable()
-            }
-
             resetPasswordButton.setOnClickListener {
                 val email = Email(emailEditText.text)
 
@@ -49,10 +42,5 @@ class ResetPasswordFragment : BaseFragment(R.layout.fragment_reset_password) {
                 emailEditTextLayout.clearError()
             }
         }
-    }
-
-    override fun onStop() {
-        sharedData.putSharedString(EMAIL, binding.emailEditText.text?.toString())
-        super.onStop()
     }
 }
