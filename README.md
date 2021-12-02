@@ -9,7 +9,7 @@ git clone https://github.com/MaxSiominDev/QR-Generator.git
 ```
 ## Requirements
 
-Any Android 5.0+ device where Google Services are available
+Any Android 8.0+ device where Google Services are available
 
 ## For developers
 This app uses navigation component to provide navigation. 
