@@ -13,10 +13,13 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor(uiActions: UiActions) : BaseViewModel(uiActions) {
 
+    @Inject
+    lateinit var auth: FirebaseAuth
+
     /**
      * Login via [FirebaseAuth]
      */
-    fun login(email: Email, password: Password, auth: FirebaseAuth, onLogin: () -> Unit) {
+    fun login(email: Email, password: Password, onLogin: () -> Unit) {
         auth.signInWithEmailAndPassword(email.value, password.value).addOnCompleteListener { task ->
             if (task.isSuccessful)
                 onLogin()

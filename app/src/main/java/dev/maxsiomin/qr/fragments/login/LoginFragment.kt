@@ -52,7 +52,7 @@ class LoginFragment : BaseFragment(R.layout.fragment_login) {
                     }
 
                     else -> {
-                        mViewModel.login(email, password, auth) {
+                        mViewModel.login(email, password) {
                             onLogin()
                         }
                     }

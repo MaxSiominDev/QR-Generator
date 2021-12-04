@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- For settings -->
     <string-array name="themes">
         <item>@string/automatically</item>

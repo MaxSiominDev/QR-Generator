@@ -12,7 +12,10 @@ import javax.inject.Inject
 @HiltViewModel
 class ResetPasswordViewModel @Inject constructor(uiActions: UiActions) : ViewModel(), UiActions by uiActions {
 
-    fun sendPasswordResetEmail(email: Email, auth: FirebaseAuth) {
+    @Inject
+    lateinit var auth: FirebaseAuth
+
+    fun sendPasswordResetEmail(email: Email) {
         auth.sendPasswordResetEmail(email.value).addOnCompleteListener { task ->
             toast(
                 if (task.isSuccessful) R.string.check_email else R.string.unable_to_send_reset_email,

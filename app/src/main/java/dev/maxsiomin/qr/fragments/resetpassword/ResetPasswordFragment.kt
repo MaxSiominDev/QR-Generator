@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
-import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import dev.maxsiomin.qr.R
 import dev.maxsiomin.qr.databinding.FragmentResetPasswordBinding
@@ -34,7 +33,7 @@ class ResetPasswordFragment : BaseFragment(R.layout.fragment_reset_password) {
                     emailEditTextLayout.error = getString(R.string.invalid_email)
                     emailEditText.requestFocus()
                 } else {
-                    mViewModel.sendPasswordResetEmail(email, FirebaseAuth.getInstance())
+                    mViewModel.sendPasswordResetEmail(email)
                 }
             }
 

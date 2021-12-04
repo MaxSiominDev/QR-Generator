@@ -13,7 +13,10 @@ import javax.inject.Inject
 @HiltViewModel
 class SignupViewModel @Inject constructor(uiActions: UiActions) : ViewModel(), UiActions by uiActions {
 
-    fun signup(email: Email, password: Password, auth: FirebaseAuth, onSignup: () -> Unit) {
+    @Inject
+    lateinit var auth: FirebaseAuth
+
+    fun signup(email: Email, password: Password, onSignup: () -> Unit) {
         auth.createUserWithEmailAndPassword(email.value, password.value).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 onSignup()

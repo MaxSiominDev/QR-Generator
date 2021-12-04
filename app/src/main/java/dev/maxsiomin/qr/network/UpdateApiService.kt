@@ -28,4 +28,3 @@ object UpdateApi {
         retrofit.create(UpdateApiService::class.java)
     }
 }
-
