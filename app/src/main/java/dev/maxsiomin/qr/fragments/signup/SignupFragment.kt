@@ -61,7 +61,7 @@ class SignupFragment : BaseFragment(R.layout.fragment_signup) {
                     }
 
                     else -> {
-                        mViewModel.signup(email, password, auth) {
+                        mViewModel.signup(email, password) {
                             auth.signInWithEmailAndPassword(email.value, password.value).addOnCompleteListener {
                                 VerifyEmailDialog.newInstance().show(parentFragmentManager)
                             }
