@@ -58,27 +58,7 @@ class UiActionsImpl(override val context: Context) : UiActions {
     override fun toast(message: String, length: Int) =
         Toast.makeText(context, message, length).show()
 
-    private data class ResIdWithArgs(
-        @StringRes val resId: Int,
-        val args: List<Any>,
-    )
-
-    /**
-     * Contains strings that were already loaded from resources
-     */
-    private val strings = mutableMapOf<ResIdWithArgs, String>()
-
-    /**
-     * If string were already loaded returns it from [strings] else uses context to get the string from resources
-     */
-    override fun getString(resId: Int, vararg args: Any): String {
-        val resIdWithArgs = ResIdWithArgs(resId, args.toList())
-
-        if (strings[resIdWithArgs] == null)
-            strings[resIdWithArgs] = context.getString(resId)
-
-        return strings[resIdWithArgs]!!
-    }
+    override fun getString(resId: Int, vararg args: Any): String = context.getString(resId, args)
 
     private val dimens = mutableMapOf<Int, Int>()
 
