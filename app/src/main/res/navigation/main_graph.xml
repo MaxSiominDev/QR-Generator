@@ -38,7 +38,9 @@
         tools:layout="@layout/fragment_signup" >
         <action
             android:id="@+id/action_signupFragment_to_tabsFragment"
-            app:destination="@id/tabsFragment" />
+            app:destination="@id/tabsFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/signupFragment"/>
     </fragment>
 
     <fragment
