@@ -3,7 +3,7 @@ package dev.maxsiomin.qr.fragments.history
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import dev.maxsiomin.qr.databinding.FragmentHistoryItemBinding
+import dev.maxsiomin.qr.databinding.HistoryItemBinding
 import dev.maxsiomin.qr.util.UiActions
 
 /**
@@ -17,7 +17,7 @@ class HistoryAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
-            FragmentHistoryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            HistoryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -26,7 +26,7 @@ class HistoryAdapter(
 
     override fun getItemCount() = values.size
 
-    inner class ViewHolder(binding: FragmentHistoryItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(binding: HistoryItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val qrCodeText = binding.qrCodeItem
 

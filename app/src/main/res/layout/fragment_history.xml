@@ -14,7 +14,7 @@
         app:layoutManager="GridLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".fragments.history.HistoryFragment"
-        tools:listitem="@layout/fragment_history_item" />
+        tools:listitem="@layout/history_item" />
 
     <!-- This textView is showed if history is empty. In this case it's exactly in center of screen -->
     <TextView
